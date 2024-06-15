@@ -1,10 +1,100 @@
 [
   {
+    "objectID": "3_bien_demarrer.html",
+    "href": "3_bien_demarrer.html",
+    "title": "Bien démarrer avec Git",
+    "section": "",
+    "text": "Pour bien contrôler ce que l’on fait avec Git, il est important de connaître les commandes de base et les meilleures pratiques.\n\n\n\ngit pull : récupérer les changements pour éviter les conflits\ngit status : visualiser l’état du projet\ngit diff : visualiser les différences\ngit add mesfichiers : ajouter certains fichiers (utiliser le git add . avec parcimonie, toujours suivi d’un git status)\ngit status : revisualiser l’état courant\ngit commit -m “message” : sauvegarder en local\ngit pull : récupérer les éventuels changement (et résoudre si conflit)\ngit push : pousser la sauvegarde à distance\n\n\n\n\n\ngit branch ma_branche_de_depart : se placer dans la branche de départ\ngit pull : récupérer tous les changements de la branche\ngit checkout {hash} : (Facultatif) se positionner éventuellement à une sauvegarde particulière\ngit branch ma_nouvelle_branche : créer la branche depuis la sauvegarde courante\ngit push : pousser la branche à distance\n[ouvrir la merge request sur la forge logicielle]\n[faire ses modifications et sauvegarder avec le process décrit ci-dessus]",
+    "crumbs": [
+      "Bien démarrer avec Git"
+    ]
+  },
+  {
+    "objectID": "3_bien_demarrer.html#contrôler-ce-que-lon-fait",
+    "href": "3_bien_demarrer.html#contrôler-ce-que-lon-fait",
+    "title": "Bien démarrer avec Git",
+    "section": "",
+    "text": "Pour bien contrôler ce que l’on fait avec Git, il est important de connaître les commandes de base et les meilleures pratiques.\n\n\n\ngit pull : récupérer les changements pour éviter les conflits\ngit status : visualiser l’état du projet\ngit diff : visualiser les différences\ngit add mesfichiers : ajouter certains fichiers (utiliser le git add . avec parcimonie, toujours suivi d’un git status)\ngit status : revisualiser l’état courant\ngit commit -m “message” : sauvegarder en local\ngit pull : récupérer les éventuels changement (et résoudre si conflit)\ngit push : pousser la sauvegarde à distance\n\n\n\n\n\ngit branch ma_branche_de_depart : se placer dans la branche de départ\ngit pull : récupérer tous les changements de la branche\ngit checkout {hash} : (Facultatif) se positionner éventuellement à une sauvegarde particulière\ngit branch ma_nouvelle_branche : créer la branche depuis la sauvegarde courante\ngit push : pousser la branche à distance\n[ouvrir la merge request sur la forge logicielle]\n[faire ses modifications et sauvegarder avec le process décrit ci-dessus]",
+    "crumbs": [
+      "Bien démarrer avec Git"
+    ]
+  },
+  {
+    "objectID": "3_bien_demarrer.html#le-fichier-.gitignore",
+    "href": "3_bien_demarrer.html#le-fichier-.gitignore",
+    "title": "Bien démarrer avec Git",
+    "section": "Le fichier .gitignore",
+    "text": "Le fichier .gitignore\nLe fichier .gitignore est utilisé pour indiquer à Git quels fichiers ou répertoires doivent être ignorés. Cela est utile pour éviter de suivre des fichiers temporaires, des configurations locales ou des fichiers de secrets.\n\nCréation d’un fichier .gitignore\nCréez un fichier nommé .gitignore à la racine de votre dépôt et ajoutez les fichiers ou répertoires que vous souhaitez ignorer. Par exemple :\n# Ignorer les fichiers de logs\nlogs/\n*.log\n\n# Ignorer les fichiers de configuration locaux\nconfig/local.yml\n\n# Ignorer les fichiers de secrets\nsecrets/\n\n\nExemples de fichiers à ignorer\n\nFichiers de configuration locaux : Les fichiers contenant des configurations spécifiques à votre environnement de développement.\nFichiers de build : Les fichiers générés par votre environnement de build.\nFichiers temporaires : Les fichiers temporaires générés par votre éditeur de texte ou votre IDE.",
+    "crumbs": [
+      "Bien démarrer avec Git"
+    ]
+  },
+  {
+    "objectID": "3_bien_demarrer.html#gestion-des-secrets",
+    "href": "3_bien_demarrer.html#gestion-des-secrets",
+    "title": "Bien démarrer avec Git",
+    "section": "Gestion des secrets",
+    "text": "Gestion des secrets\nLa gestion des secrets dans un projet de développement est cruciale pour assurer la sécurité de vos données sensibles (clés API, mots de passe, etc.).\n\nNe jamais versionner les secrets\nIl est fortement déconseillé de versionner les secrets dans votre dépôt Git. Utilisez le fichier .gitignore pour vous assurer que ces fichiers ne sont pas suivis.\n\n\nUtiliser des variables d’environnement\nUne pratique courante pour gérer les secrets est d’utiliser des variables d’environnement. Vous pouvez stocker vos secrets dans un fichier .env (qui doit être ajouté à .gitignore) et les charger dans votre application. Vous pouvez sauvegarder un fichier template.env et indiquez dans le README.md qu’il faut le renommer et compléter les valeurs des clés.\n\n\nExemple de fichier .env\nDATABASE_URL=postgres://user:password@localhost:5432/mydatabase\nAPI_KEY=your_api_key_here\n\n\nUtilisation des outils de gestion des secrets\nIl existe des outils spécifiques pour la gestion des secrets, comme Vault de HashiCorp, AWS Secrets Manager ou Azure Key Vault. Ces outils offrent des fonctionnalités avancées pour stocker et accéder aux secrets de manière sécurisée.",
+    "crumbs": [
+      "Bien démarrer avec Git"
+    ]
+  },
+  {
+    "objectID": "1_intro.html",
+    "href": "1_intro.html",
+    "title": "Introduction à Git",
+    "section": "",
+    "text": "Git est un système de contrôle de version distribué. Autrement dit, Git permet de sauvegarder différents états d’un projet. En outre, Git permet de suivre les modifications apportées aux fichiers et de coordonner le travail entre plusieurs personnes.\nGit en bref :\n\nSystème distribué : Chaque personne a une copie complète de l’historique du projet, permettant de travailler hors ligne et d’avoir une sauvegarde de toutes les versions du projet.\nSystème infini d’univers parallèles : Git permet de créer des branches, des univers parallèles de sauvegarde permettant d’expérimenter puis d’apporter les modifications finales (correction de bug, fonctionnalités) à l’univers principal.\nSystème rapide et efficace : s’installe et s’utilise rapidement",
+    "crumbs": [
+      "Introduction à Git"
+    ]
+  },
+  {
+    "objectID": "1_intro.html#quest-ce-que-git",
+    "href": "1_intro.html#quest-ce-que-git",
+    "title": "Introduction à Git",
+    "section": "",
+    "text": "Git est un système de contrôle de version distribué. Autrement dit, Git permet de sauvegarder différents états d’un projet. En outre, Git permet de suivre les modifications apportées aux fichiers et de coordonner le travail entre plusieurs personnes.\nGit en bref :\n\nSystème distribué : Chaque personne a une copie complète de l’historique du projet, permettant de travailler hors ligne et d’avoir une sauvegarde de toutes les versions du projet.\nSystème infini d’univers parallèles : Git permet de créer des branches, des univers parallèles de sauvegarde permettant d’expérimenter puis d’apporter les modifications finales (correction de bug, fonctionnalités) à l’univers principal.\nSystème rapide et efficace : s’installe et s’utilise rapidement",
+    "crumbs": [
+      "Introduction à Git"
+    ]
+  },
+  {
+    "objectID": "1_intro.html#pourquoi-utiliser-git",
+    "href": "1_intro.html#pourquoi-utiliser-git",
+    "title": "Introduction à Git",
+    "section": "Pourquoi utiliser Git ?",
+    "text": "Pourquoi utiliser Git ?\n\nHistorique détaillé des modifications\n\nGit enregistre chaque modification apportée aux fichiers d’un projet. Cela permet de revenir à une version précédente si nécessaire, de comprendre qui a apporté quelle modification et pourquoi.\n\nCollaboration facile\n\nGit facilite le travail en équipe. Les membres peuvent travailler sur des branches distinctes et fusionner leurs modifications finales. Cela réduit les risques de conflits et permet une gestion plus fluide des contributions.\n\nSauvegardes distribuées\n\nChaque copie du dépôt Git contient l’intégralité de l’historique du projet. Cela signifie que si le serveur principal tombe en panne, tout membre ayant une copie à jour du dépôt peut restaurer le projet.\n\nOutils et intégration\n\nGit s’intègre avec de nombreux outils et services, comme GitHub.com, GitLab.com. Ces plateformes offrent des fonctionnalités supplémentaires comme la gestion des pull requests, l’intégration continue et la gestion des tickets.",
+    "crumbs": [
+      "Introduction à Git"
+    ]
+  },
+  {
+    "objectID": "1_intro.html#comment-utiliser-git",
+    "href": "1_intro.html#comment-utiliser-git",
+    "title": "Introduction à Git",
+    "section": "Comment utiliser Git ?",
+    "text": "Comment utiliser Git ?\n\n1. Installation de Git\nPour utiliser Git, il faut d’abord l’installer. Voici comment procéder pour les principaux systèmes d’exploitation :\n\nWindows : Télécharger et installer Git depuis git-scm.com.\nMac : Utiliser Homebrew avec la commande brew install git ou télécharger depuis git-scm.com.\nLinux : Utiliser le gestionnaire de paquets de votre distribution (par exemple, sudo apt install git pour Debian/Ubuntu).\n\n\n\n2. Configuration de Git\nAprès l’installation, configurez Git avec votre nom et votre adresse email :\ngit config --global user.name \"Votre Nom\"\ngit config --global user.email \"votre.email@example.com\"\n\n\n3. Initialisation d’un dépôt Git\nPour initialiser un nouveau dépôt Git dans un répertoire existant, utilisez la commande :\ngit init\n\n\n4. Clonage d’un dépôt existant\nPour cloner un dépôt existant depuis une URL, utilisez :\ngit clone https://url.du.depot.git\n\n\n5. Gestion des fichiers\n\nAjouter des fichiers : Pour ajouter des fichiers à l’index (staging area), utilisez :\ngit add nom_du_fichier\nou pour ajouter tous les fichiers modifiés :\ngit add .\nValider des modifications : Pour valider (commit) les modifications ajoutées à l’index avec un message de commit, utilisez :\ngit commit -m \"Message de commit\"\n\n\n\n6. Branches\n\nCréer une nouvelle branche :\ngit branch nom_de_branche\nChanger de branche :\ngit checkout nom_de_branche\nCréer et changer de branche en une seule commande :\ngit checkout -b nom_de_branche\nFusionner une branche :\ngit merge nom_de_branche\n\n\n\n7. Synchronisation avec un dépôt distant\n\nPousser des modifications vers un dépôt distant :\ngit push origin nom_de_branche\nRécupérer des modifications depuis un dépôt distant :\ngit pull origin nom_de_branche\n\n\n\n8. Révision et résolution de conflits\n\nVoir l’état du dépôt :\ngit status\nVoir l’historique des commits :\ngit log\nRésolution de conflits : En cas de conflit lors d’une fusion, Git vous indiquera les fichiers concernés. Vous devrez éditer ces fichiers pour résoudre les conflits, puis valider les modifications.\n\nEn suivant ces étapes, vous serez en mesure de commencer à utiliser Git pour gérer vos projets de manière efficace et collaborative.",
+    "crumbs": [
+      "Introduction à Git"
+    ]
+  },
+  {
     "objectID": "2_concepts.html",
     "href": "2_concepts.html",
     "title": "Concepts de base de Git",
     "section": "",
-    "text": "L’historique local dans Git représente l’ensemble des modifications et des versions successives d’un projet qui sont stockées localement sur votre ordinateur. Chaque fois que vous validez des modifications avec une nouvelle sauvegarde (commit), une nouvelle entrée est ajoutée à cet historique. Cet historique permet de suivre l’évolution du projet, de revenir à des versions antérieures et de comprendre les modifications apportées.\n\n\n\nVoir l’historique des commits :\ngit log\nAffiche une liste des commits avec leur identifiant, l’auteur, la date et le message de commit.",
+    "text": "Dans l’introduction, nous avons vu certaines notions clés et Git à un usage néophyte peut se résumer à ces fondamentaux :\n\nSavoir créer ou récupérer un projet git\nFaire des modifications et sauvegarder en local\nPousser des sauvegardes vers le serveur distant\nRécupérer des sauvegardes depuis le serveur distant\n\nIl est bien important de distinguer ce qui est local et ce qui est distant, tout comme la localisation de vos fichiers (local, réseau, distant).",
+    "crumbs": [
+      "Concepts de base"
+    ]
+  },
+  {
+    "objectID": "2_concepts.html#notions-centrales",
+    "href": "2_concepts.html#notions-centrales",
+    "title": "Concepts de base de Git",
+    "section": "",
+    "text": "Dans l’introduction, nous avons vu certaines notions clés et Git à un usage néophyte peut se résumer à ces fondamentaux :\n\nSavoir créer ou récupérer un projet git\nFaire des modifications et sauvegarder en local\nPousser des sauvegardes vers le serveur distant\nRécupérer des sauvegardes depuis le serveur distant\n\nIl est bien important de distinguer ce qui est local et ce qui est distant, tout comme la localisation de vos fichiers (local, réseau, distant).",
     "crumbs": [
       "Concepts de base"
     ]
@@ -13,8 +103,8 @@
     "objectID": "2_concepts.html#historique-local-git",
     "href": "2_concepts.html#historique-local-git",
     "title": "Concepts de base de Git",
-    "section": "",
-    "text": "L’historique local dans Git représente l’ensemble des modifications et des versions successives d’un projet qui sont stockées localement sur votre ordinateur. Chaque fois que vous validez des modifications avec une nouvelle sauvegarde (commit), une nouvelle entrée est ajoutée à cet historique. Cet historique permet de suivre l’évolution du projet, de revenir à des versions antérieures et de comprendre les modifications apportées.\n\n\n\nVoir l’historique des commits :\ngit log\nAffiche une liste des commits avec leur identifiant, l’auteur, la date et le message de commit.",
+    "section": "Historique local Git",
+    "text": "Historique local Git\nL’historique local dans Git représente l’ensemble des modifications et des versions successives d’un projet qui sont stockées localement sur votre ordinateur. Chaque fois que vous validez des modifications avec une nouvelle sauvegarde (commit), une nouvelle entrée est ajoutée à cet historique. Cet historique permet de suivre l’évolution du projet, de revenir à des versions antérieures et de comprendre les modifications apportées.\n\nCommandes principales :\n\nVoir l’historique des commits :\ngit log\nAffiche une liste des commits avec leur identifiant, l’auteur, la date et le message de commit.",
     "crumbs": [
       "Concepts de base"
     ]
@@ -87,46 +177,6 @@
     "text": "Récupérer une/les sauvegarde/s depuis l’historique centralisé - synchronisation entrante (pull/fetch)\n\nRécupérer les modifications depuis le dépôt distant (pull)\nLa commande git pull est utilisée pour récupérer les modifications depuis le dépôt distant et les fusionner avec votre branche locale.\ngit pull origin nom_de_branche\n\n\nRécupérer les modifications sans les fusionner (fetch)\nLa commande git fetch télécharge les modifications depuis le dépôt distant, mais ne les fusionne pas automatiquement. Vous pouvez ensuite les examiner et les fusionner manuellement.\ngit fetch origin\nPour fusionner les modifications après un fetch :\ngit merge origin/nom_de_branche\nEn utilisant ces commandes, vous pouvez gérer efficacement l’historique de votre projet, collaborer avec d’autres développeurs et synchroniser vos modifications avec un dépôt centralisé.",
     "crumbs": [
       "Concepts de base"
-    ]
-  },
-  {
-    "objectID": "1_intro.html",
-    "href": "1_intro.html",
-    "title": "Introduction à Git",
-    "section": "",
-    "text": "Git est un système de contrôle de version distribué. Autrement dit, Git permet de sauvegarder différents états d’un projet. En outre, Git permet de suivre les modifications apportées aux fichiers et de coordonner le travail entre plusieurs personnes.\nGit en bref :\n\nSystème distribué : Chaque personne a une copie complète de l’historique du projet, permettant de travailler hors ligne et d’avoir une sauvegarde de toutes les versions du projet.\nSystème infini d’univers parallèles : Git permet de créer des branches, des univers parallèles de sauvegarde permettant d’expérimenter puis d’apporter les modifications finales (correction de bug, fonctionnalités) à l’univers principal.\nSystème rapide et efficace : s’installe et s’utilise rapidement",
-    "crumbs": [
-      "Introduction à Git"
-    ]
-  },
-  {
-    "objectID": "1_intro.html#quest-ce-que-git",
-    "href": "1_intro.html#quest-ce-que-git",
-    "title": "Introduction à Git",
-    "section": "",
-    "text": "Git est un système de contrôle de version distribué. Autrement dit, Git permet de sauvegarder différents états d’un projet. En outre, Git permet de suivre les modifications apportées aux fichiers et de coordonner le travail entre plusieurs personnes.\nGit en bref :\n\nSystème distribué : Chaque personne a une copie complète de l’historique du projet, permettant de travailler hors ligne et d’avoir une sauvegarde de toutes les versions du projet.\nSystème infini d’univers parallèles : Git permet de créer des branches, des univers parallèles de sauvegarde permettant d’expérimenter puis d’apporter les modifications finales (correction de bug, fonctionnalités) à l’univers principal.\nSystème rapide et efficace : s’installe et s’utilise rapidement",
-    "crumbs": [
-      "Introduction à Git"
-    ]
-  },
-  {
-    "objectID": "1_intro.html#pourquoi-utiliser-git",
-    "href": "1_intro.html#pourquoi-utiliser-git",
-    "title": "Introduction à Git",
-    "section": "Pourquoi utiliser Git ?",
-    "text": "Pourquoi utiliser Git ?\n\nHistorique détaillé des modifications Git enregistre chaque modification apportée aux fichiers d’un projet. Cela permet de revenir à une version précédente si nécessaire, de comprendre qui a apporté quelle modification et pourquoi.\nCollaboration facile Git facilite le travail en équipe. Les membres peuvent travailler sur des branches distinctes et fusionner leurs modifications finales. Cela réduit les risques de conflits et permet une gestion plus fluide des contributions.\nSauvegardes distribuées Chaque copie du dépôt Git contient l’intégralité de l’historique du projet. Cela signifie que si le serveur principal tombe en panne, tout membre ayant une copie à jour du dépôt peut restaurer le projet.\nOutils et intégration Git s’intègre avec de nombreux outils et services, comme GitHub.com, GitLab.com. Ces plateformes offrent des fonctionnalités supplémentaires comme la gestion des pull requests, l’intégration continue et la gestion des tickets.",
-    "crumbs": [
-      "Introduction à Git"
-    ]
-  },
-  {
-    "objectID": "1_intro.html#comment-utiliser-git",
-    "href": "1_intro.html#comment-utiliser-git",
-    "title": "Introduction à Git",
-    "section": "Comment utiliser Git ?",
-    "text": "Comment utiliser Git ?\n\n1. Installation de Git\nPour utiliser Git, il faut d’abord l’installer. Voici comment procéder pour les principaux systèmes d’exploitation :\n\nWindows : Télécharger et installer Git depuis git-scm.com.\nMac : Utiliser Homebrew avec la commande brew install git ou télécharger depuis git-scm.com.\nLinux : Utiliser le gestionnaire de paquets de votre distribution (par exemple, sudo apt install git pour Debian/Ubuntu).\n\n\n\n2. Configuration de Git\nAprès l’installation, configurez Git avec votre nom et votre adresse email :\ngit config --global user.name \"Votre Nom\"\ngit config --global user.email \"votre.email@example.com\"\n\n\n3. Initialisation d’un dépôt Git\nPour initialiser un nouveau dépôt Git dans un répertoire existant, utilisez la commande :\ngit init\n\n\n4. Clonage d’un dépôt existant\nPour cloner un dépôt existant depuis une URL, utilisez :\ngit clone https://url.du.depot.git\n\n\n5. Gestion des fichiers\n\nAjouter des fichiers : Pour ajouter des fichiers à l’index (staging area), utilisez :\ngit add nom_du_fichier\nou pour ajouter tous les fichiers modifiés :\ngit add .\nValider des modifications : Pour valider (commit) les modifications ajoutées à l’index avec un message de commit, utilisez :\ngit commit -m \"Message de commit\"\n\n\n\n6. Branches\n\nCréer une nouvelle branche :\ngit branch nom_de_branche\nChanger de branche :\ngit checkout nom_de_branche\nCréer et changer de branche en une seule commande :\ngit checkout -b nom_de_branche\nFusionner une branche :\ngit merge nom_de_branche\n\n\n\n7. Synchronisation avec un dépôt distant\n\nPousser des modifications vers un dépôt distant :\ngit push origin nom_de_branche\nRécupérer des modifications depuis un dépôt distant :\ngit pull origin nom_de_branche\n\n\n\n8. Révision et résolution de conflits\n\nVoir l’état du dépôt :\ngit status\nVoir l’historique des commits :\ngit log\nRésolution de conflits : En cas de conflit lors d’une fusion, Git vous indiquera les fichiers concernés. Vous devrez éditer ces fichiers pour résoudre les conflits, puis valider les modifications.\n\nEn suivant ces étapes, vous serez en mesure de commencer à utiliser Git pour gérer vos projets de manière efficace et collaborative.",
-    "crumbs": [
-      "Introduction à Git"
     ]
   }
 ]

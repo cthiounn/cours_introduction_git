@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="cthiounn">
-<meta name="dcterms.date" content="2024-05-25">
+<meta name="dcterms.date" content="2024-06-15">
 
-<title>Cours introduction à Git - Introduction à Git</title>
+<title>Cours introduction à Git - Bien démarrer avec Git</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,40 +21,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -116,7 +82,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./1_intro.html">Introduction à Git</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./3_bien_demarrer.html">Bien démarrer avec Git</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -146,7 +112,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./1_intro.html" class="sidebar-item-text sidebar-link active">
+  <a href="./1_intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction à Git</span></a>
   </div>
 </li>
@@ -158,7 +124,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./3_bien_demarrer.html" class="sidebar-item-text sidebar-link">
+  <a href="./3_bien_demarrer.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Bien démarrer avec Git</span></a>
   </div>
 </li>
@@ -172,18 +138,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#quest-ce-que-git" id="toc-quest-ce-que-git" class="nav-link active" data-scroll-target="#quest-ce-que-git">Qu’est-ce que Git ?</a></li>
-  <li><a href="#pourquoi-utiliser-git" id="toc-pourquoi-utiliser-git" class="nav-link" data-scroll-target="#pourquoi-utiliser-git">Pourquoi utiliser Git ?</a></li>
-  <li><a href="#comment-utiliser-git" id="toc-comment-utiliser-git" class="nav-link" data-scroll-target="#comment-utiliser-git">Comment utiliser Git ?</a>
+  <li><a href="#contrôler-ce-que-lon-fait" id="toc-contrôler-ce-que-lon-fait" class="nav-link active" data-scroll-target="#contrôler-ce-que-lon-fait">Contrôler ce que l’on fait</a>
   <ul class="collapse">
-  <li><a href="#installation-de-git" id="toc-installation-de-git" class="nav-link" data-scroll-target="#installation-de-git">1. Installation de Git</a></li>
-  <li><a href="#configuration-de-git" id="toc-configuration-de-git" class="nav-link" data-scroll-target="#configuration-de-git">2. Configuration de Git</a></li>
-  <li><a href="#initialisation-dun-dépôt-git" id="toc-initialisation-dun-dépôt-git" class="nav-link" data-scroll-target="#initialisation-dun-dépôt-git">3. Initialisation d’un dépôt Git</a></li>
-  <li><a href="#clonage-dun-dépôt-existant" id="toc-clonage-dun-dépôt-existant" class="nav-link" data-scroll-target="#clonage-dun-dépôt-existant">4. Clonage d’un dépôt existant</a></li>
-  <li><a href="#gestion-des-fichiers" id="toc-gestion-des-fichiers" class="nav-link" data-scroll-target="#gestion-des-fichiers">5. Gestion des fichiers</a></li>
-  <li><a href="#branches" id="toc-branches" class="nav-link" data-scroll-target="#branches">6. Branches</a></li>
-  <li><a href="#synchronisation-avec-un-dépôt-distant" id="toc-synchronisation-avec-un-dépôt-distant" class="nav-link" data-scroll-target="#synchronisation-avec-un-dépôt-distant">7. Synchronisation avec un dépôt distant</a></li>
-  <li><a href="#révision-et-résolution-de-conflits" id="toc-révision-et-résolution-de-conflits" class="nav-link" data-scroll-target="#révision-et-résolution-de-conflits">8. Révision et résolution de conflits</a></li>
+  <li><a href="#faire-une-sauvegarde-maîtrisée" id="toc-faire-une-sauvegarde-maîtrisée" class="nav-link" data-scroll-target="#faire-une-sauvegarde-maîtrisée">Faire une sauvegarde maîtrisée</a></li>
+  <li><a href="#utilisation-des-branches" id="toc-utilisation-des-branches" class="nav-link" data-scroll-target="#utilisation-des-branches">Utilisation des branches</a></li>
+  </ul></li>
+  <li><a href="#le-fichier-.gitignore" id="toc-le-fichier-.gitignore" class="nav-link" data-scroll-target="#le-fichier-.gitignore">Le fichier .gitignore</a>
+  <ul class="collapse">
+  <li><a href="#création-dun-fichier-.gitignore" id="toc-création-dun-fichier-.gitignore" class="nav-link" data-scroll-target="#création-dun-fichier-.gitignore">Création d’un fichier <code>.gitignore</code></a></li>
+  <li><a href="#exemples-de-fichiers-à-ignorer" id="toc-exemples-de-fichiers-à-ignorer" class="nav-link" data-scroll-target="#exemples-de-fichiers-à-ignorer">Exemples de fichiers à ignorer</a></li>
+  </ul></li>
+  <li><a href="#gestion-des-secrets" id="toc-gestion-des-secrets" class="nav-link" data-scroll-target="#gestion-des-secrets">Gestion des secrets</a>
+  <ul class="collapse">
+  <li><a href="#ne-jamais-versionner-les-secrets" id="toc-ne-jamais-versionner-les-secrets" class="nav-link" data-scroll-target="#ne-jamais-versionner-les-secrets">Ne jamais versionner les secrets</a></li>
+  <li><a href="#utiliser-des-variables-denvironnement" id="toc-utiliser-des-variables-denvironnement" class="nav-link" data-scroll-target="#utiliser-des-variables-denvironnement">Utiliser des variables d’environnement</a></li>
+  <li><a href="#exemple-de-fichier-.env" id="toc-exemple-de-fichier-.env" class="nav-link" data-scroll-target="#exemple-de-fichier-.env">Exemple de fichier <code>.env</code></a></li>
+  <li><a href="#utilisation-des-outils-de-gestion-des-secrets" id="toc-utilisation-des-outils-de-gestion-des-secrets" class="nav-link" data-scroll-target="#utilisation-des-outils-de-gestion-des-secrets">Utilisation des outils de gestion des secrets</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -193,7 +163,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Introduction à Git</h1>
+<h1 class="title">Bien démarrer avec Git</h1>
 </div>
 
 
@@ -210,7 +180,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 25, 2024</p>
+      <p class="date">June 15, 2024</p>
     </div>
   </div>
   
@@ -222,105 +192,79 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="quest-ce-que-git" class="level2">
-<h2 class="anchored" data-anchor-id="quest-ce-que-git">Qu’est-ce que Git ?</h2>
-<p>Git est un système de contrôle de version distribué. Autrement dit, Git permet de sauvegarder différents états d’un projet. En outre, Git permet de suivre les modifications apportées aux fichiers et de coordonner le travail entre plusieurs personnes.</p>
-<p>Git en bref :</p>
-<ul>
-<li><strong>Système distribué</strong> : Chaque personne a une copie complète de l’historique du projet, permettant de travailler hors ligne et d’avoir une sauvegarde de toutes les versions du projet.</li>
-<li><strong>Système infini d’univers parallèles</strong> : Git permet de créer des branches, des univers parallèles de sauvegarde permettant d’expérimenter puis d’apporter les modifications finales (correction de bug, fonctionnalités) à l’univers principal.</li>
-<li><strong>Système rapide et efficace</strong> : s’installe et s’utilise rapidement</li>
-</ul>
-</section>
-<section id="pourquoi-utiliser-git" class="level2">
-<h2 class="anchored" data-anchor-id="pourquoi-utiliser-git">Pourquoi utiliser Git ?</h2>
+<section id="contrôler-ce-que-lon-fait" class="level2">
+<h2 class="anchored" data-anchor-id="contrôler-ce-que-lon-fait">Contrôler ce que l’on fait</h2>
+<p>Pour bien contrôler ce que l’on fait avec Git, il est important de connaître les commandes de base et les meilleures pratiques.</p>
+<section id="faire-une-sauvegarde-maîtrisée" class="level3">
+<h3 class="anchored" data-anchor-id="faire-une-sauvegarde-maîtrisée">Faire une sauvegarde maîtrisée</h3>
 <ol type="1">
-<li>Historique détaillé des modifications</li>
+<li><strong>git pull</strong> : récupérer les changements pour éviter les conflits</li>
+<li><strong>git status</strong> : visualiser l’état du projet</li>
+<li><strong>git diff</strong> : visualiser les différences</li>
+<li><strong>git add mesfichiers</strong> : ajouter certains fichiers (utiliser le <code>git add .</code> avec parcimonie, toujours suivi d’un <code>git status</code>)</li>
+<li><strong>git status</strong> : revisualiser l’état courant</li>
+<li><strong>git commit -m “message”</strong> : sauvegarder en local</li>
+<li><strong>git pull</strong> : récupérer les éventuels changement (et résoudre si conflit)</li>
+<li><strong>git push</strong> : pousser la sauvegarde à distance</li>
 </ol>
-<p>Git enregistre chaque modification apportée aux fichiers d’un projet. Cela permet de revenir à une version précédente si nécessaire, de comprendre qui a apporté quelle modification et pourquoi.</p>
-<ol start="2" type="1">
-<li>Collaboration facile</li>
+</section>
+<section id="utilisation-des-branches" class="level3">
+<h3 class="anchored" data-anchor-id="utilisation-des-branches">Utilisation des branches</h3>
+<ol type="1">
+<li><strong>git branch ma_branche_de_depart</strong> : se placer dans la branche de départ</li>
+<li><strong>git pull</strong> : récupérer tous les changements de la branche</li>
+<li><strong>git checkout {hash}</strong> : <em>(Facultatif)</em> se positionner éventuellement à une sauvegarde particulière</li>
+<li><strong>git branch ma_nouvelle_branche</strong> : créer la branche depuis la sauvegarde courante</li>
+<li><strong>git push</strong> : pousser la branche à distance</li>
+<li>[ouvrir la merge request sur la forge logicielle]</li>
+<li>[faire ses modifications et sauvegarder avec le process décrit ci-dessus]</li>
 </ol>
-<p>Git facilite le travail en équipe. Les membres peuvent travailler sur des branches distinctes et fusionner leurs modifications finales. Cela réduit les risques de conflits et permet une gestion plus fluide des contributions.</p>
-<ol start="3" type="1">
-<li>Sauvegardes distribuées</li>
-</ol>
-<p>Chaque copie du dépôt Git contient l’intégralité de l’historique du projet. Cela signifie que si le serveur principal tombe en panne, tout membre ayant une copie à jour du dépôt peut restaurer le projet.</p>
-<ol start="4" type="1">
-<li>Outils et intégration</li>
-</ol>
-<p>Git s’intègre avec de nombreux outils et services, comme GitHub.com, GitLab.com. Ces plateformes offrent des fonctionnalités supplémentaires comme la gestion des pull requests, l’intégration continue et la gestion des tickets.</p>
 </section>
-<section id="comment-utiliser-git" class="level2">
-<h2 class="anchored" data-anchor-id="comment-utiliser-git">Comment utiliser Git ?</h2>
-<section id="installation-de-git" class="level3">
-<h3 class="anchored" data-anchor-id="installation-de-git">1. Installation de Git</h3>
-<p>Pour utiliser Git, il faut d’abord l’installer. Voici comment procéder pour les principaux systèmes d’exploitation :</p>
+</section>
+<section id="le-fichier-.gitignore" class="level2">
+<h2 class="anchored" data-anchor-id="le-fichier-.gitignore">Le fichier .gitignore</h2>
+<p>Le fichier <code>.gitignore</code> est utilisé pour indiquer à Git quels fichiers ou répertoires doivent être ignorés. Cela est utile pour éviter de suivre des fichiers temporaires, des configurations locales ou des fichiers de secrets.</p>
+<section id="création-dun-fichier-.gitignore" class="level3">
+<h3 class="anchored" data-anchor-id="création-dun-fichier-.gitignore">Création d’un fichier <code>.gitignore</code></h3>
+<p>Créez un fichier nommé <code>.gitignore</code> à la racine de votre dépôt et ajoutez les fichiers ou répertoires que vous souhaitez ignorer. Par exemple :</p>
+<pre><code># Ignorer les fichiers de logs
+logs/
+*.log
+
+# Ignorer les fichiers de configuration locaux
+config/local.yml
+
+# Ignorer les fichiers de secrets
+secrets/</code></pre>
+</section>
+<section id="exemples-de-fichiers-à-ignorer" class="level3">
+<h3 class="anchored" data-anchor-id="exemples-de-fichiers-à-ignorer">Exemples de fichiers à ignorer</h3>
 <ul>
-<li><strong>Windows</strong> : Télécharger et installer Git depuis <a href="https://git-scm.com/">git-scm.com</a>.</li>
-<li><strong>Mac</strong> : Utiliser Homebrew avec la commande <code>brew install git</code> ou télécharger depuis <a href="https://git-scm.com/">git-scm.com</a>.</li>
-<li><strong>Linux</strong> : Utiliser le gestionnaire de paquets de votre distribution (par exemple, <code>sudo apt install git</code> pour Debian/Ubuntu).</li>
+<li><strong>Fichiers de configuration locaux</strong> : Les fichiers contenant des configurations spécifiques à votre environnement de développement.</li>
+<li><strong>Fichiers de build</strong> : Les fichiers générés par votre environnement de build.</li>
+<li><strong>Fichiers temporaires</strong> : Les fichiers temporaires générés par votre éditeur de texte ou votre IDE.</li>
 </ul>
 </section>
-<section id="configuration-de-git" class="level3">
-<h3 class="anchored" data-anchor-id="configuration-de-git">2. Configuration de Git</h3>
-<p>Après l’installation, configurez Git avec votre nom et votre adresse email :</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Votre Nom"</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"votre.email@example.com"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="initialisation-dun-dépôt-git" class="level3">
-<h3 class="anchored" data-anchor-id="initialisation-dun-dépôt-git">3. Initialisation d’un dépôt Git</h3>
-<p>Pour initialiser un nouveau dépôt Git dans un répertoire existant, utilisez la commande :</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="gestion-des-secrets" class="level2">
+<h2 class="anchored" data-anchor-id="gestion-des-secrets">Gestion des secrets</h2>
+<p>La gestion des secrets dans un projet de développement est cruciale pour assurer la sécurité de vos données sensibles (clés API, mots de passe, etc.).</p>
+<section id="ne-jamais-versionner-les-secrets" class="level3">
+<h3 class="anchored" data-anchor-id="ne-jamais-versionner-les-secrets">Ne jamais versionner les secrets</h3>
+<p>Il est fortement déconseillé de versionner les secrets dans votre dépôt Git. Utilisez le fichier <code>.gitignore</code> pour vous assurer que ces fichiers ne sont pas suivis.</p>
 </section>
-<section id="clonage-dun-dépôt-existant" class="level3">
-<h3 class="anchored" data-anchor-id="clonage-dun-dépôt-existant">4. Clonage d’un dépôt existant</h3>
-<p>Pour cloner un dépôt existant depuis une URL, utilisez :</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://url.du.depot.git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="utiliser-des-variables-denvironnement" class="level3">
+<h3 class="anchored" data-anchor-id="utiliser-des-variables-denvironnement">Utiliser des variables d’environnement</h3>
+<p>Une pratique courante pour gérer les secrets est d’utiliser des variables d’environnement. Vous pouvez stocker vos secrets dans un fichier <code>.env</code> (qui doit être ajouté à <code>.gitignore</code>) et les charger dans votre application. Vous pouvez sauvegarder un fichier template.env et indiquez dans le <code>README.md</code> qu’il faut le renommer et compléter les valeurs des clés.</p>
 </section>
-<section id="gestion-des-fichiers" class="level3">
-<h3 class="anchored" data-anchor-id="gestion-des-fichiers">5. Gestion des fichiers</h3>
-<ul>
-<li><p><strong>Ajouter des fichiers</strong> : Pour ajouter des fichiers à l’index (staging area), utilisez :</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add nom_du_fichier</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>ou pour ajouter tous les fichiers modifiés :</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p><strong>Valider des modifications</strong> : Pour valider (commit) les modifications ajoutées à l’index avec un message de commit, utilisez :</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Message de commit"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-</ul>
+<section id="exemple-de-fichier-.env" class="level3">
+<h3 class="anchored" data-anchor-id="exemple-de-fichier-.env">Exemple de fichier <code>.env</code></h3>
+<pre><code>DATABASE_URL=postgres://user:password@localhost:5432/mydatabase
+API_KEY=your_api_key_here</code></pre>
 </section>
-<section id="branches" class="level3">
-<h3 class="anchored" data-anchor-id="branches">6. Branches</h3>
-<ul>
-<li><p><strong>Créer une nouvelle branche</strong> :</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch nom_de_branche</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p><strong>Changer de branche</strong> :</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout nom_de_branche</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p><strong>Créer et changer de branche en une seule commande</strong> :</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> nom_de_branche</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p><strong>Fusionner une branche</strong> :</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> merge nom_de_branche</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-</ul>
-</section>
-<section id="synchronisation-avec-un-dépôt-distant" class="level3">
-<h3 class="anchored" data-anchor-id="synchronisation-avec-un-dépôt-distant">7. Synchronisation avec un dépôt distant</h3>
-<ul>
-<li><p><strong>Pousser des modifications vers un dépôt distant</strong> :</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin nom_de_branche</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p><strong>Récupérer des modifications depuis un dépôt distant</strong> :</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull origin nom_de_branche</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-</ul>
-</section>
-<section id="révision-et-résolution-de-conflits" class="level3">
-<h3 class="anchored" data-anchor-id="révision-et-résolution-de-conflits">8. Révision et résolution de conflits</h3>
-<ul>
-<li><p><strong>Voir l’état du dépôt</strong> :</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p><strong>Voir l’historique des commits</strong> :</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p><strong>Résolution de conflits</strong> : En cas de conflit lors d’une fusion, Git vous indiquera les fichiers concernés. Vous devrez éditer ces fichiers pour résoudre les conflits, puis valider les modifications.</p></li>
-</ul>
-<p>En suivant ces étapes, vous serez en mesure de commencer à utiliser Git pour gérer vos projets de manière efficace et collaborative.</p>
+<section id="utilisation-des-outils-de-gestion-des-secrets" class="level3">
+<h3 class="anchored" data-anchor-id="utilisation-des-outils-de-gestion-des-secrets">Utilisation des outils de gestion des secrets</h3>
+<p>Il existe des outils spécifiques pour la gestion des secrets, comme Vault de HashiCorp, AWS Secrets Manager ou Azure Key Vault. Ces outils offrent des fonctionnalités avancées pour stocker et accéder aux secrets de manière sécurisée.</p>
 
 
 </section>

@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://cthiounn.github.io/cours_introduction_git/2_concepts.html</loc>
-    <lastmod>2024-06-15T01:05:58.077Z</lastmod>
+    <loc>https://cthiounn.github.io/cours_introduction_git/3_bien_demarrer.html</loc>
+    <lastmod>2024-06-15T01:36:25.691Z</lastmod>
   </url>
   <url>
     <loc>https://cthiounn.github.io/cours_introduction_git/1_intro.html</loc>
-    <lastmod>2024-06-15T01:05:58.077Z</lastmod>
+    <lastmod>2024-06-15T01:36:25.691Z</lastmod>
+  </url>
+  <url>
+    <loc>https://cthiounn.github.io/cours_introduction_git/2_concepts.html</loc>
+    <lastmod>2024-06-15T01:36:25.691Z</lastmod>
   </url>
 </urlset>
