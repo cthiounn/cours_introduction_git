@@ -1,0 +1,29 @@
+project:
+  type: website
+  
+execute:
+  freeze: auto
+
+website:
+  title: "Cours introduction à Git"
+
+  page-footer:
+    right: "Ce site a été créé avec [Quarto](https://quarto.org/)"
+    
+  sidebar:
+    pinned: true
+    align: center
+    style: "docked"
+    contents:
+      - href: 1_intro.qmd
+        text: Introduction à Git
+      - href: 2_concepts.qmd
+        text: Concepts de base
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+    code-copy: true
+    code-overflow: wrap
+    toc: true
