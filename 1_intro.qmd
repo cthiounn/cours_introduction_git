@@ -7,6 +7,8 @@ format: html
 
 ## Qu'est-ce que Git ?
 
+> **Git est un incontournable dans les métiers du numérique, pour ne pas dire un prérequis.** L'outil est puissant et complexe. Cependant, il peut se prendre facilement en main pour ce qui est de ses fonctionnalités basiques, avec de la pratique **régulière** et des bonnes habitudes.
+
 Git est un système de contrôle de version distribué. Autrement dit, Git permet de sauvegarder différents états d'un projet. En outre, Git permet de suivre les modifications apportées aux fichiers et de coordonner le travail entre plusieurs personnes. 
 
 Git en bref :

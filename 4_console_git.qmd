@@ -1,0 +1,46 @@
+---
+title: "Ouvrir une console Git ou une interface graphique Git ?"
+author: "cthiounn"
+date: "2024-06-15"
+format: html
+---
+
+## Ouvrir une console Git
+
+La console Git, aussi connue sous le nom de terminal, est un outil essentiel pour interagir avec Git via des lignes de commande.
+
+### Sur Windows
+
+1. **Git Bash** : Lors de l'installation de Git pour Windows, Git Bash est inclus. Vous pouvez le trouver dans le menu Démarrer sous "Git Bash". 
+2. **Invite de Commandes ou PowerShell** : Vous pouvez également utiliser l'Invite de Commandes ou PowerShell pour exécuter des commandes Git après avoir installé Git.
+
+### Sur macOS
+
+1. **Terminal** : Vous pouvez ouvrir le Terminal (situé dans Applications > Utilitaires) et utiliser les commandes Git directement après avoir installé Git via Homebrew ou directement depuis le site officiel.
+
+### Sur Linux
+
+1. **Terminal** : Le terminal est généralement préinstallé dans les distributions Linux. Vous pouvez installer Git en utilisant votre gestionnaire de paquets, par exemple :
+
+```sh
+sudo apt-get install git # pour Debian/Ubuntu
+sudo yum install git # pour Fedora/Red Hat
+```
+
+## Utiliser une interface graphique Git
+
+Il peut parfois s'avérer utile d'utiliser des interfaces graphiques (GUI) pour une gestion plus visuelle de Git, ou d'utiliser la forge logicielle distante, pour gérer les issues, les merge/pull request et discuter avec les autres membres de l'équipe.
+
+### Exemples de logiciels
+
+1. **Sourcetree**
+2. **GitKraken**
+3. **GitHub Desktop**
+
+### Naviguer à travers des forges logicielles
+
+Les forges logicielles sont des plateformes qui hébergent des dépôts Git et offrent des outils pour la collaboration, comme la gestion des issues, les pull requests, et l'intégration continue.
+
+1. **GitHub**
+2. **GitLab**
+3. **Bitbucket**

@@ -21,6 +21,8 @@ website:
         text: Concepts de base
       - href: 3_bien_demarrer.qmd
         text: Bien démarrer avec Git
+      - href: 4_console_git.qmd
+        text: Ouvrir une console Git
 format:
   html:
     theme:
