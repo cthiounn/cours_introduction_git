@@ -18,15 +18,19 @@ Git en bref :
 ## Pourquoi utiliser Git ?
 
 1. Historique détaillé des modifications
+
 Git enregistre chaque modification apportée aux fichiers d'un projet. Cela permet de revenir à une version précédente si nécessaire, de comprendre qui a apporté quelle modification et pourquoi.
 
 2. Collaboration facile
+
 Git facilite le travail en équipe. Les membres peuvent travailler sur des branches distinctes et fusionner leurs modifications finales. Cela réduit les risques de conflits et permet une gestion plus fluide des contributions.
 
 3. Sauvegardes distribuées
+
 Chaque copie du dépôt Git contient l'intégralité de l'historique du projet. Cela signifie que si le serveur principal tombe en panne, tout membre ayant une copie à jour du dépôt peut restaurer le projet.
 
-5. Outils et intégration
+4. Outils et intégration
+
 Git s'intègre avec de nombreux outils et services, comme GitHub.com, GitLab.com. Ces plateformes offrent des fonctionnalités supplémentaires comme la gestion des pull requests, l'intégration continue et la gestion des tickets.
 
 ## Comment utiliser Git ?

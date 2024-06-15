@@ -1,0 +1,83 @@
+---
+title: "Bien démarrer avec Git"
+author: "cthiounn"
+date: "2024-06-15"
+format: html
+---
+
+## Contrôler ce que l'on fait
+
+Pour bien contrôler ce que l'on fait avec Git, il est important de connaître les commandes de base et les meilleures pratiques.
+
+### Faire une sauvegarde maîtrisée
+
+1. **git pull** : récupérer les changements pour éviter les conflits
+2. **git status** : visualiser l'état du projet
+3. **git diff** : visualiser les différences
+4. **git add mesfichiers** : ajouter certains fichiers (utiliser le `git add .` avec parcimonie, toujours suivi d'un `git status`)
+5. **git status** : revisualiser l'état courant
+6. **git commit -m "message"** : sauvegarder en local
+7. **git pull** : récupérer les éventuels changement (et résoudre si conflit)
+8. **git push** : pousser la sauvegarde à distance
+
+### Utilisation des branches
+
+1. **git branch ma_branche_de_depart** : se placer dans la branche de départ
+2. **git pull** : récupérer tous les changements de la branche
+3. **git checkout {hash}** : *(Facultatif)* se positionner éventuellement à une sauvegarde particulière
+4. **git branch ma_nouvelle_branche** : créer la branche depuis la sauvegarde courante
+5. **git push** : pousser la branche à distance
+6. [ouvrir la merge request sur la forge logicielle]
+7. [faire ses modifications et sauvegarder avec le process décrit ci-dessus]
+
+## Le fichier .gitignore
+
+Le fichier `.gitignore` est utilisé pour indiquer à Git quels fichiers ou répertoires doivent être ignorés. Cela est utile pour éviter de suivre des fichiers temporaires, des configurations locales ou des fichiers de secrets.
+
+### Création d'un fichier `.gitignore`
+
+Créez un fichier nommé `.gitignore` à la racine de votre dépôt et ajoutez les fichiers ou répertoires que vous souhaitez ignorer. Par exemple :
+```
+# Ignorer les fichiers de logs
+logs/
+*.log
+
+# Ignorer les fichiers de configuration locaux
+config/local.yml
+
+# Ignorer les fichiers de secrets
+secrets/
+```
+
+### Exemples de fichiers à ignorer
+
+- **Fichiers de configuration locaux** : Les fichiers contenant des configurations spécifiques à votre environnement de développement.
+- **Fichiers de build** : Les fichiers générés par votre environnement de build.
+- **Fichiers temporaires** : Les fichiers temporaires générés par votre éditeur de texte ou votre IDE.
+
+
+
+
+
+## Gestion des secrets
+
+La gestion des secrets dans un projet de développement est cruciale pour assurer la sécurité de vos données sensibles (clés API, mots de passe, etc.).
+
+### Ne jamais versionner les secrets
+
+Il est fortement déconseillé de versionner les secrets dans votre dépôt Git. Utilisez le fichier `.gitignore` pour vous assurer que ces fichiers ne sont pas suivis.
+
+### Utiliser des variables d'environnement
+
+Une pratique courante pour gérer les secrets est d'utiliser des variables d'environnement. Vous pouvez stocker vos secrets dans un fichier `.env` (qui doit être ajouté à `.gitignore`) et les charger dans votre application. Vous pouvez sauvegarder un fichier template.env et indiquez dans le `README.md` qu'il faut le renommer et compléter les valeurs des clés.
+
+### Exemple de fichier `.env`
+
+```
+DATABASE_URL=postgres://user:password@localhost:5432/mydatabase
+API_KEY=your_api_key_here
+```
+
+### Utilisation des outils de gestion des secrets
+
+Il existe des outils spécifiques pour la gestion des secrets, comme Vault de HashiCorp, AWS Secrets Manager ou Azure Key Vault. Ces outils offrent des fonctionnalités avancées pour stocker et accéder aux secrets de manière sécurisée.

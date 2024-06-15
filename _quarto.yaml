@@ -19,6 +19,8 @@ website:
         text: Introduction à Git
       - href: 2_concepts.qmd
         text: Concepts de base
+      - href: 3_bien_demarrer.qmd
+        text: Bien démarrer avec Git
 format:
   html:
     theme:

@@ -5,6 +5,17 @@ date: "2024-05-25"
 format: html
 ---
 
+## Notions centrales
+
+Dans l'introduction, nous avons vu certaines notions clés et Git à un usage néophyte peut se résumer à ces fondamentaux : 
+
+1. Savoir créer ou récupérer un projet git
+2. Faire des modifications et sauvegarder en local
+3. Pousser des sauvegardes vers le serveur distant
+4. Récupérer des sauvegardes depuis le serveur distant
+
+Il est bien important de distinguer ce qui est local et ce qui est distant, tout comme la localisation de vos fichiers (local, réseau, distant).
+
 ## Historique local Git
 
 L'historique local dans Git représente l'ensemble des modifications et des versions successives d'un projet qui sont stockées localement sur votre ordinateur. 
