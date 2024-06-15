@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="cthiounn">
-<meta name="dcterms.date" content="2024-05-25">
+<meta name="dcterms.date" content="2024-06-15">
 
-<title>Cours introduction à Git - Introduction à Git</title>
+<title>Cours introduction à Git - Ouvrir une console Git ou une interface graphique Git ?</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -116,7 +116,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./1_intro.html">Introduction à Git</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./4_console_git.html">Ouvrir une console Git</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -146,7 +146,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./1_intro.html" class="sidebar-item-text sidebar-link active">
+  <a href="./1_intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction à Git</span></a>
   </div>
 </li>
@@ -164,7 +164,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./4_console_git.html" class="sidebar-item-text sidebar-link">
+  <a href="./4_console_git.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Ouvrir une console Git</span></a>
   </div>
 </li>
@@ -178,18 +178,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#quest-ce-que-git" id="toc-quest-ce-que-git" class="nav-link active" data-scroll-target="#quest-ce-que-git">Qu’est-ce que Git ?</a></li>
-  <li><a href="#pourquoi-utiliser-git" id="toc-pourquoi-utiliser-git" class="nav-link" data-scroll-target="#pourquoi-utiliser-git">Pourquoi utiliser Git ?</a></li>
-  <li><a href="#comment-utiliser-git" id="toc-comment-utiliser-git" class="nav-link" data-scroll-target="#comment-utiliser-git">Comment utiliser Git ?</a>
+  <li><a href="#ouvrir-une-console-git" id="toc-ouvrir-une-console-git" class="nav-link active" data-scroll-target="#ouvrir-une-console-git">Ouvrir une console Git</a>
   <ul class="collapse">
-  <li><a href="#installation-de-git" id="toc-installation-de-git" class="nav-link" data-scroll-target="#installation-de-git">1. Installation de Git</a></li>
-  <li><a href="#configuration-de-git" id="toc-configuration-de-git" class="nav-link" data-scroll-target="#configuration-de-git">2. Configuration de Git</a></li>
-  <li><a href="#initialisation-dun-dépôt-git" id="toc-initialisation-dun-dépôt-git" class="nav-link" data-scroll-target="#initialisation-dun-dépôt-git">3. Initialisation d’un dépôt Git</a></li>
-  <li><a href="#clonage-dun-dépôt-existant" id="toc-clonage-dun-dépôt-existant" class="nav-link" data-scroll-target="#clonage-dun-dépôt-existant">4. Clonage d’un dépôt existant</a></li>
-  <li><a href="#gestion-des-fichiers" id="toc-gestion-des-fichiers" class="nav-link" data-scroll-target="#gestion-des-fichiers">5. Gestion des fichiers</a></li>
-  <li><a href="#branches" id="toc-branches" class="nav-link" data-scroll-target="#branches">6. Branches</a></li>
-  <li><a href="#synchronisation-avec-un-dépôt-distant" id="toc-synchronisation-avec-un-dépôt-distant" class="nav-link" data-scroll-target="#synchronisation-avec-un-dépôt-distant">7. Synchronisation avec un dépôt distant</a></li>
-  <li><a href="#révision-et-résolution-de-conflits" id="toc-révision-et-résolution-de-conflits" class="nav-link" data-scroll-target="#révision-et-résolution-de-conflits">8. Révision et résolution de conflits</a></li>
+  <li><a href="#sur-windows" id="toc-sur-windows" class="nav-link" data-scroll-target="#sur-windows">Sur Windows</a></li>
+  <li><a href="#sur-macos" id="toc-sur-macos" class="nav-link" data-scroll-target="#sur-macos">Sur macOS</a></li>
+  <li><a href="#sur-linux" id="toc-sur-linux" class="nav-link" data-scroll-target="#sur-linux">Sur Linux</a></li>
+  </ul></li>
+  <li><a href="#utiliser-une-interface-graphique-git" id="toc-utiliser-une-interface-graphique-git" class="nav-link" data-scroll-target="#utiliser-une-interface-graphique-git">Utiliser une interface graphique Git</a>
+  <ul class="collapse">
+  <li><a href="#exemples-de-logiciels" id="toc-exemples-de-logiciels" class="nav-link" data-scroll-target="#exemples-de-logiciels">Exemples de logiciels</a></li>
+  <li><a href="#naviguer-à-travers-des-forges-logicielles" id="toc-naviguer-à-travers-des-forges-logicielles" class="nav-link" data-scroll-target="#naviguer-à-travers-des-forges-logicielles">Naviguer à travers des forges logicielles</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -199,7 +197,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Introduction à Git</h1>
+<h1 class="title">Ouvrir une console Git ou une interface graphique Git ?</h1>
 </div>
 
 
@@ -216,7 +214,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 25, 2024</p>
+      <p class="date">June 15, 2024</p>
     </div>
   </div>
   
@@ -228,108 +226,50 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="quest-ce-que-git" class="level2">
-<h2 class="anchored" data-anchor-id="quest-ce-que-git">Qu’est-ce que Git ?</h2>
-<blockquote class="blockquote">
-<p><strong>Git est un incontournable dans les métiers du numérique, pour ne pas dire un prérequis.</strong> L’outil est puissant et complexe. Cependant, il peut se prendre facilement en main pour ce qui est de ses fonctionnalités basiques, avec de la pratique <strong>régulière</strong> et des bonnes habitudes.</p>
-</blockquote>
-<p>Git est un système de contrôle de version distribué. Autrement dit, Git permet de sauvegarder différents états d’un projet. En outre, Git permet de suivre les modifications apportées aux fichiers et de coordonner le travail entre plusieurs personnes.</p>
-<p>Git en bref :</p>
-<ul>
-<li><strong>Système distribué</strong> : Chaque personne a une copie complète de l’historique du projet, permettant de travailler hors ligne et d’avoir une sauvegarde de toutes les versions du projet.</li>
-<li><strong>Système infini d’univers parallèles</strong> : Git permet de créer des branches, des univers parallèles de sauvegarde permettant d’expérimenter puis d’apporter les modifications finales (correction de bug, fonctionnalités) à l’univers principal.</li>
-<li><strong>Système rapide et efficace</strong> : s’installe et s’utilise rapidement</li>
-</ul>
-</section>
-<section id="pourquoi-utiliser-git" class="level2">
-<h2 class="anchored" data-anchor-id="pourquoi-utiliser-git">Pourquoi utiliser Git ?</h2>
+<section id="ouvrir-une-console-git" class="level2">
+<h2 class="anchored" data-anchor-id="ouvrir-une-console-git">Ouvrir une console Git</h2>
+<p>La console Git, aussi connue sous le nom de terminal, est un outil essentiel pour interagir avec Git via des lignes de commande.</p>
+<section id="sur-windows" class="level3">
+<h3 class="anchored" data-anchor-id="sur-windows">Sur Windows</h3>
 <ol type="1">
-<li>Historique détaillé des modifications</li>
+<li><strong>Git Bash</strong> : Lors de l’installation de Git pour Windows, Git Bash est inclus. Vous pouvez le trouver dans le menu Démarrer sous “Git Bash”.</li>
+<li><strong>Invite de Commandes ou PowerShell</strong> : Vous pouvez également utiliser l’Invite de Commandes ou PowerShell pour exécuter des commandes Git après avoir installé Git.</li>
 </ol>
-<p>Git enregistre chaque modification apportée aux fichiers d’un projet. Cela permet de revenir à une version précédente si nécessaire, de comprendre qui a apporté quelle modification et pourquoi.</p>
-<ol start="2" type="1">
-<li>Collaboration facile</li>
+</section>
+<section id="sur-macos" class="level3">
+<h3 class="anchored" data-anchor-id="sur-macos">Sur macOS</h3>
+<ol type="1">
+<li><strong>Terminal</strong> : Vous pouvez ouvrir le Terminal (situé dans Applications &gt; Utilitaires) et utiliser les commandes Git directement après avoir installé Git via Homebrew ou directement depuis le site officiel.</li>
 </ol>
-<p>Git facilite le travail en équipe. Les membres peuvent travailler sur des branches distinctes et fusionner leurs modifications finales. Cela réduit les risques de conflits et permet une gestion plus fluide des contributions.</p>
-<ol start="3" type="1">
-<li>Sauvegardes distribuées</li>
+</section>
+<section id="sur-linux" class="level3">
+<h3 class="anchored" data-anchor-id="sur-linux">Sur Linux</h3>
+<ol type="1">
+<li><strong>Terminal</strong> : Le terminal est généralement préinstallé dans les distributions Linux. Vous pouvez installer Git en utilisant votre gestionnaire de paquets, par exemple :</li>
 </ol>
-<p>Chaque copie du dépôt Git contient l’intégralité de l’historique du projet. Cela signifie que si le serveur principal tombe en panne, tout membre ayant une copie à jour du dépôt peut restaurer le projet.</p>
-<ol start="4" type="1">
-<li>Outils et intégration</li>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get install git <span class="co"># pour Debian/Ubuntu</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> yum install git <span class="co"># pour Fedora/Red Hat</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="utiliser-une-interface-graphique-git" class="level2">
+<h2 class="anchored" data-anchor-id="utiliser-une-interface-graphique-git">Utiliser une interface graphique Git</h2>
+<p>Il peut parfois s’avérer utile d’utiliser des interfaces graphiques (GUI) pour une gestion plus visuelle de Git, ou d’utiliser la forge logicielle distante, pour gérer les issues, les merge/pull request et discuter avec les autres membres de l’équipe.</p>
+<section id="exemples-de-logiciels" class="level3">
+<h3 class="anchored" data-anchor-id="exemples-de-logiciels">Exemples de logiciels</h3>
+<ol type="1">
+<li><strong>Sourcetree</strong></li>
+<li><strong>GitKraken</strong></li>
+<li><strong>GitHub Desktop</strong></li>
 </ol>
-<p>Git s’intègre avec de nombreux outils et services, comme GitHub.com, GitLab.com. Ces plateformes offrent des fonctionnalités supplémentaires comme la gestion des pull requests, l’intégration continue et la gestion des tickets.</p>
 </section>
-<section id="comment-utiliser-git" class="level2">
-<h2 class="anchored" data-anchor-id="comment-utiliser-git">Comment utiliser Git ?</h2>
-<section id="installation-de-git" class="level3">
-<h3 class="anchored" data-anchor-id="installation-de-git">1. Installation de Git</h3>
-<p>Pour utiliser Git, il faut d’abord l’installer. Voici comment procéder pour les principaux systèmes d’exploitation :</p>
-<ul>
-<li><strong>Windows</strong> : Télécharger et installer Git depuis <a href="https://git-scm.com/">git-scm.com</a>.</li>
-<li><strong>Mac</strong> : Utiliser Homebrew avec la commande <code>brew install git</code> ou télécharger depuis <a href="https://git-scm.com/">git-scm.com</a>.</li>
-<li><strong>Linux</strong> : Utiliser le gestionnaire de paquets de votre distribution (par exemple, <code>sudo apt install git</code> pour Debian/Ubuntu).</li>
-</ul>
-</section>
-<section id="configuration-de-git" class="level3">
-<h3 class="anchored" data-anchor-id="configuration-de-git">2. Configuration de Git</h3>
-<p>Après l’installation, configurez Git avec votre nom et votre adresse email :</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Votre Nom"</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"votre.email@example.com"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="initialisation-dun-dépôt-git" class="level3">
-<h3 class="anchored" data-anchor-id="initialisation-dun-dépôt-git">3. Initialisation d’un dépôt Git</h3>
-<p>Pour initialiser un nouveau dépôt Git dans un répertoire existant, utilisez la commande :</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="clonage-dun-dépôt-existant" class="level3">
-<h3 class="anchored" data-anchor-id="clonage-dun-dépôt-existant">4. Clonage d’un dépôt existant</h3>
-<p>Pour cloner un dépôt existant depuis une URL, utilisez :</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://url.du.depot.git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="gestion-des-fichiers" class="level3">
-<h3 class="anchored" data-anchor-id="gestion-des-fichiers">5. Gestion des fichiers</h3>
-<ul>
-<li><p><strong>Ajouter des fichiers</strong> : Pour ajouter des fichiers à l’index (staging area), utilisez :</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add nom_du_fichier</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>ou pour ajouter tous les fichiers modifiés :</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p><strong>Valider des modifications</strong> : Pour valider (commit) les modifications ajoutées à l’index avec un message de commit, utilisez :</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Message de commit"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-</ul>
-</section>
-<section id="branches" class="level3">
-<h3 class="anchored" data-anchor-id="branches">6. Branches</h3>
-<ul>
-<li><p><strong>Créer une nouvelle branche</strong> :</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch nom_de_branche</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p><strong>Changer de branche</strong> :</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout nom_de_branche</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p><strong>Créer et changer de branche en une seule commande</strong> :</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> nom_de_branche</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p><strong>Fusionner une branche</strong> :</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> merge nom_de_branche</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-</ul>
-</section>
-<section id="synchronisation-avec-un-dépôt-distant" class="level3">
-<h3 class="anchored" data-anchor-id="synchronisation-avec-un-dépôt-distant">7. Synchronisation avec un dépôt distant</h3>
-<ul>
-<li><p><strong>Pousser des modifications vers un dépôt distant</strong> :</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin nom_de_branche</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p><strong>Récupérer des modifications depuis un dépôt distant</strong> :</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull origin nom_de_branche</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-</ul>
-</section>
-<section id="révision-et-résolution-de-conflits" class="level3">
-<h3 class="anchored" data-anchor-id="révision-et-résolution-de-conflits">8. Révision et résolution de conflits</h3>
-<ul>
-<li><p><strong>Voir l’état du dépôt</strong> :</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p><strong>Voir l’historique des commits</strong> :</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p><strong>Résolution de conflits</strong> : En cas de conflit lors d’une fusion, Git vous indiquera les fichiers concernés. Vous devrez éditer ces fichiers pour résoudre les conflits, puis valider les modifications.</p></li>
-</ul>
-<p>En suivant ces étapes, vous serez en mesure de commencer à utiliser Git pour gérer vos projets de manière efficace et collaborative.</p>
+<section id="naviguer-à-travers-des-forges-logicielles" class="level3">
+<h3 class="anchored" data-anchor-id="naviguer-à-travers-des-forges-logicielles">Naviguer à travers des forges logicielles</h3>
+<p>Les forges logicielles sont des plateformes qui hébergent des dépôts Git et offrent des outils pour la collaboration, comme la gestion des issues, les pull requests, et l’intégration continue.</p>
+<ol type="1">
+<li><strong>GitHub</strong></li>
+<li><strong>GitLab</strong></li>
+<li><strong>Bitbucket</strong></li>
+</ol>
 
 
 </section>
